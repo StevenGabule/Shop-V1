@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+
+   
+<meta charset="utf-8">
+    
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<meta name="description" content="">
+    
+<meta name="author" content="">
+
+    
+<title>Online Shop</title>
+
+    
+<!-- Bootstrap Core CSS -->
+    
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    
+<!-- Custom CSS -->
+    
+<link href="css/styles.css" rel="stylesheet">
+
+    
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    
+<![endif]-->
+
+
+</head>
+
+
+<body>
+
+  
+<style>
+img {
+border: none;
+}
+.main {
+font: 12px/24px Arial, Helvetica, sans-serif;
+width: 730px;
+margin: 100px auto;
+position: relative;
+text-align: left;
+}
+.main:after {
+content: "";
+clear: both;
+display: table;
+}
+#show {
+width: 240px;
+height: 338px;
+overflow: hidden;
+position: relative;
+left: 0;
+}
+#show_mark {
+position: absolute;
+top: 0;
+left: 0;
+width: 200px;
+height: 100px;
+background-color: #000;
+opacity: .5;
+filter: alpha(opacity=50);
+cursor: crosshair;
+border: 1px solid #999;
+display: none;
+}
+#zoom {
+position: absolute;
+left: 250px;
+top: 0;
+z-index: 3;
+width: 400px;
+height: 400px;
+display: none;
+overflow: hidden;
+border: 1px solid #eee;
+}
+#zoom img {
+position: absolute;
+left: 0;
+top: 0;
+}
+
+</style>
+
+<div class="main row">
+  <div id="show" class="col-md-6"> <img src="images/admin.jpg" id="show_pic" width="240" height="338" /> </div>
+  <div id="zoom" class="col-md-6"> <img src="images/admin.jpg"/> </div>
+</div>  
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/simpleZoom.js"></script>
+<script type="text/javascript">
+$(function(){	
+	$("#show").simpleZoom({
+		zoomBox : "#zoom",
+		markSize : [120, 169],
+		zoomSize : [240, 338],
+		zoomImg : [480, 677]
+	});
+});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+
+</html>
